@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bichig - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Noto+Sans+Mongolian&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="top-nav-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"><img class="brand-mark-icon" src="logo-horse-pixel.svg" alt="Horse logo" /></span>
+          <span class="brand-name">Bichig</span>
+        </a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="nav-link active" href="index.html">Home</a>
+          <a class="nav-link" href="studio.html">Studio</a>
+          <a class="nav-link" href="freehand.html">Freehand Quiz</a>
+          <a class="nav-link" href="lessons.html">Lessons</a>
+          <a class="nav-link" href="cheatsheet.html">Cheat Sheet</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Traditional Mongolian Script Learning Web App</p>
+        <h1>Learn, Practice, and Test Script Writing in One Place</h1>
+        <p>
+          Bichig is a structured web app for Traditional Mongolian script. Start with guided lessons,
+          train with spaced repetition, and test yourself with script writing quizzes using either typed
+          Mongol script or freehand drawing.
+        </p>
+      </section>
+
+      <section class="grid three">
+        <article class="panel surface-muted">
+          <span class="kicker">01 · Train</span>
+          <h3>Character Studio</h3>
+          <p class="subtext">
+            Learn individual letters, build memory with spaced repetition, and use confusable drills.
+          </p>
+        </article>
+
+        <article class="panel surface-muted">
+          <span class="kicker">02 · Write</span>
+          <h3>Freehand Quiz</h3>
+          <p class="subtext">
+            Enter a Mongolian word in Cyrillic or Latin and write it in script using keyboard or freehand.
+          </p>
+        </article>
+
+        <article class="panel surface-muted">
+          <span class="kicker">03 · Review</span>
+          <h3>Lessons + Cheat Sheet</h3>
+          <p class="subtext">
+            Follow a lesson sequence and keep a concise rule reference open while practicing.
+          </p>
+        </article>
+      </section>
+
+      <section class="grid three">
+        <article class="panel">
+          <h2>Traditional Mongol Script</h2>
+          <p class="subtext">
+            This is the historical vertical script (Mongol bichig), written top-to-bottom in columns.
+            In this app, it is the target script you learn to read and write.
+          </p>
+        </article>
+
+        <article class="panel">
+          <h2>Cyrillic Mongolian</h2>
+          <p class="subtext">
+            Modern Mongolian in Mongolia is commonly written in Cyrillic. Many learners already know this
+            system, so it is used as a practical bridge into Traditional script.
+          </p>
+        </article>
+
+        <article class="panel">
+          <h2>Latin Input</h2>
+          <p class="subtext">
+            Latin is included as an accessibility/input layer (for keyboards and beginners). It is not the
+            final writing system, but it helps users start practice quickly.
+          </p>
+        </article>
+      </section>
+
+      <section class="grid two">
+        <article class="panel">
+          <h2>Why Taught This Way</h2>
+          <p class="subtext">
+            The learning flow moves from familiar input systems (Cyrillic/Latin) to Traditional script output,
+            then from recognition to production. This reduces beginner overload and improves retention.
+          </p>
+          <ul class="bullet-list">
+            <li>Start with transliteration and letter recognition in Studio.</li>
+            <li>Move to Script Writing Quiz for typed and freehand output practice.</li>
+            <li>Use Lessons and Cheat Sheet for structure, rules, and quick reference.</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <h2>Transliteration Note</h2>
+          <p class="subtext">
+            The built-in transliteration is currently rule-based and deterministic, designed for learning clarity.
+            It is not a full linguistic parser for every lexical/orthographic edge case.
+          </p>
+          <ul class="bullet-list">
+            <li>Great for core learning and script writing practice.</li>
+            <li>Ambiguous words can still require context or dictionary support.</li>
+            <li>Best future upgrade: hybrid model (rules + exceptions dictionary).</li>
+          </ul>
+        </article>
+      </section>
+
+      <p class="footer-note">
+        Tip: install a Mongolian-capable font (such as Noto Sans Mongolian) for best rendering quality.
+      </p>
+    </div>
+      <script src="theme-switcher.js"></script>
+  </body>
+</html>

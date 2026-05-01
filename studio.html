@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bichig - Studio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Noto+Sans+Mongolian&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="top-nav-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"><img class="brand-mark-icon" src="logo-horse-pixel.svg" alt="Horse logo" /></span>
+          <span class="brand-name">Bichig</span>
+        </a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link active" href="studio.html">Studio</a>
+          <a class="nav-link" href="freehand.html">Freehand Quiz</a>
+          <a class="nav-link" href="lessons.html">Lessons</a>
+          <a class="nav-link" href="cheatsheet.html">Cheat Sheet</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Learning Studio</p>
+        <h1>Character Training + Transliteration + Review</h1>
+        <p>
+          This page is focused on recognition and structured study. Use the tabs to switch between
+          character cards, transliteration, confusable drills, and render diagnostics.
+        </p>
+        <div class="stat-grid">
+          <div class="stat"><span>Practice Score</span><strong id="scoreValue">0</strong></div>
+          <div class="stat"><span>Current Streak</span><strong id="streakValue">0 days</strong></div>
+          <div class="stat"><span>Due Cards</span><strong id="dueValue">0</strong></div>
+          <div class="stat"><span>Mastered</span><strong id="masteredValue">0/0</strong></div>
+        </div>
+      </section>
+
+      <nav class="tabs" aria-label="Studio tabs">
+        <button class="tab-btn" data-tab="cards" type="button">Cards</button>
+        <button class="tab-btn" data-tab="translit" type="button">Transliteration</button>
+        <button class="tab-btn" data-tab="challenge" type="button">Confusables</button>
+        <button class="tab-btn" data-tab="render" type="button">Render Check</button>
+      </nav>
+
+      <section id="tab-cards" class="tab-panel panel">
+        <h2>Character Cards</h2>
+        <p class="subtext">Answer with the Latin value, then grade the review difficulty.</p>
+
+        <div class="grid two">
+          <article class="panel surface-muted">
+            <div id="charGlyph" class="glyph-focus"><span class="glyph-vertical">ᠠ</span></div>
+            <div class="metric-row">
+              <div class="metric-item"><span>Name</span><strong id="charName">A</strong></div>
+              <div class="metric-item"><span>Cyrillic Bridge</span><strong id="charCyr">а</strong></div>
+              <div class="metric-item"><span>Latin Value</span><strong id="charLatin">a</strong></div>
+              <div class="metric-item"><span>Hint</span><strong id="charHint">-</strong></div>
+            </div>
+          </article>
+
+          <article class="panel surface-muted">
+            <label>Choose the Latin value</label>
+            <div id="cardChoices" class="mc-options" role="group" aria-label="Latin answer choices"></div>
+            <div class="inline-row">
+              <button class="action-btn alt" id="prevCardBtn" type="button">Previous</button>
+              <button class="action-btn alt" id="nextCardBtn" type="button">Next</button>
+            </div>
+            <p id="cardFeedback" class="feedback"></p>
+          </article>
+        </div>
+
+        <div class="grid three">
+          <article class="panel surface-muted">
+            <h3>Due Queue</h3>
+            <div class="metric-row">
+              <div class="metric-item"><span>Due Now</span><strong id="queueDueCount">0</strong></div>
+              <div class="metric-item"><span>Next Due</span><strong id="nextDueValue">-</strong></div>
+            </div>
+            <div class="inline-row">
+              <button id="studyDueBtn" class="action-btn" type="button">Study Next Due</button>
+            </div>
+          </article>
+
+          <article class="panel surface-muted">
+            <h3>Grade This Recall</h3>
+            <div class="inline-row">
+              <button id="gradeAgainBtn" class="action-btn alt" type="button" disabled>Again</button>
+              <button id="gradeHardBtn" class="action-btn alt" type="button" disabled>Hard</button>
+              <button id="gradeGoodBtn" class="action-btn alt" type="button" disabled>Good</button>
+              <button id="gradeEasyBtn" class="action-btn alt" type="button" disabled>Easy</button>
+            </div>
+            <p id="gradeHint" class="subtext">Answer correctly first, then choose a review grade.</p>
+          </article>
+
+          <article class="panel surface-muted">
+            <h3>Lesson Progression</h3>
+            <label for="lessonSelect">Lesson</label>
+            <select id="lessonSelect"></select>
+            <div class="inline-row">
+              <button id="startLessonBtn" class="action-btn alt" type="button">Start Lesson</button>
+            </div>
+            <p id="lessonStatus" class="subtext">-</p>
+          </article>
+        </div>
+
+        <div id="lessonProgress" class="lesson-stack"></div>
+      </section>
+
+      <section id="tab-translit" class="tab-panel panel">
+        <h2>Transliteration Lab</h2>
+        <p class="subtext">
+          Enter Mongolian text in Cyrillic or Latin. The app detects input type and converts to script.
+        </p>
+        <div class="grid two">
+          <article class="panel surface-muted">
+            <label for="sourceInput">Input (Cyrillic or Latin)</label>
+            <textarea id="sourceInput" rows="8" placeholder="Сайн байна уу or sain baina uu">Сайн байна уу</textarea>
+            <div class="inline-row">
+              <button id="convertBtn" class="action-btn" type="button">Convert</button>
+            </div>
+            <p class="subtext">Detected system: <strong id="sourceSystem">unknown</strong></p>
+          </article>
+
+          <article class="panel surface-muted">
+            <label for="latinOutput">Latin Output</label>
+            <textarea id="latinOutput" rows="3" readonly></textarea>
+            <label for="traditionalOutput">Traditional Script Output</label>
+            <textarea id="traditionalOutput" rows="3" readonly></textarea>
+            <p class="subtext">
+              Engine: <strong id="convertMethod">rules</strong> · Confidence:
+              <strong id="convertConfidence">0%</strong>
+            </p>
+            <div id="convertStats" class="rule-chip-wrap"></div>
+            <p class="subtext">Alternative suggestions</p>
+            <ul id="tradCandidates" class="bullet-list compact-list"></ul>
+            <p class="subtext">Preview</p>
+            <div id="tradPreview" class="glyph-focus"><span class="glyph-vertical">ᠰᠠᠢᠨ</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section id="tab-challenge" class="tab-panel panel">
+        <h2>Confusable Challenge</h2>
+        <p id="challengeStep" class="subtext">Question 1</p>
+        <h3 id="challengePrompt">-</h3>
+        <div id="challengeOptions" class="challenge-options"></div>
+        <p id="challengeFeedback" class="feedback"></p>
+        <div class="inline-row">
+          <button id="nextChallengeBtn" class="action-btn alt" type="button">Next Challenge</button>
+        </div>
+      </section>
+
+      <section id="tab-render" class="tab-panel panel">
+        <h2>Render Check</h2>
+        <p class="subtext">Test whether your browser/font setup can render each core glyph.</p>
+        <div class="inline-row">
+          <button id="runRenderBtn" class="action-btn" type="button">Run Render Check</button>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Glyph</th>
+                <th>Name</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="renderTable"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <p class="footer-note">
+        Freehand drawing is available on the dedicated Freehand Quiz page.
+      </p>
+    </div>
+
+    <script src="app-common.js"></script>
+    <script src="app-studio.js"></script>
+      <script src="theme-switcher.js"></script>
+  </body>
+</html>

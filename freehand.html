@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bichig - Script Writing Quiz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Noto+Sans+Mongolian&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="top-nav-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"><img class="brand-mark-icon" src="logo-horse-pixel.svg" alt="Horse logo" /></span>
+          <span class="brand-name">Bichig</span>
+        </a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="studio.html">Studio</a>
+          <a class="nav-link active" href="freehand.html">Freehand Quiz</a>
+          <a class="nav-link" href="lessons.html">Lessons</a>
+          <a class="nav-link" href="cheatsheet.html">Cheat Sheet</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Writing Practice</p>
+        <h1>Script Writing Quiz</h1>
+        <p>
+          Enter a Mongolian word in Cyrillic or Latin, then write its Traditional-script form in either
+          typed mode or freehand mode. The app checks your answer against the transliteration engine.
+        </p>
+      </section>
+
+      <section>
+        <article class="panel">
+          <h2>Script Writing Quiz</h2>
+          <p class="subtext">
+            Generate random words automatically (Cyrillic or Latin prompts), or enter your own word and quiz yourself.
+          </p>
+
+          <p class="subtext">Quiz source mode</p>
+          <div class="mode-switch" role="tablist" aria-label="Quiz source mode">
+            <button id="inputSourceModeBtn" class="mode-pill" type="button">Input Quiz Mode</button>
+            <button id="randomSourceModeBtn" class="mode-pill active" type="button">Random Quiz Mode</button>
+          </div>
+
+          <div id="inputSourcePanel" class="panel surface-muted hide">
+            <label for="quizInput">Word Input (Cyrillic or Latin)</label>
+            <input id="quizInput" placeholder="Example: Сайн or sain" autocomplete="off" />
+            <div class="inline-row">
+              <button id="generateQuizBtn" class="action-btn" type="button">Generate From Input</button>
+            </div>
+          </div>
+
+          <div id="randomSourcePanel" class="panel surface-muted">
+            <p class="subtext">Prompt script for random quizzes</p>
+            <div class="mode-switch" role="tablist" aria-label="Prompt script">
+              <button id="sourceCyrBtn" class="mode-pill active" type="button">Cyrillic Prompt</button>
+              <button id="sourceLatinBtn" class="mode-pill" type="button">Latin Prompt</button>
+            </div>
+            <div class="inline-row">
+              <button id="randomQuizBtn" class="action-btn" type="button">Random Quiz</button>
+            </div>
+          </div>
+
+          <div class="inline-row">
+            <button id="revealAnswerBtn" class="action-btn warn" type="button">Reveal Answer</button>
+          </div>
+
+          <div class="metric-row">
+            <div class="metric-item"><span>Current Prompt</span><strong id="quizPromptText">-</strong></div>
+            <div class="metric-item"><span>Detected Input</span><strong id="quizSystem">unknown</strong></div>
+            <div class="metric-item"><span>Expected Script</span><strong id="quizExpectedMasked">•••</strong></div>
+          </div>
+          <p id="quizConvertMeta" class="subtext">Converter: -</p>
+          <p class="subtext">Accepted spellings for this quiz</p>
+          <div id="quizAcceptedWrap" class="rule-chip-wrap"></div>
+
+          <div class="mode-switch" role="tablist" aria-label="Quiz mode">
+            <button id="typedModeBtn" class="mode-pill active" type="button">Typed Script Mode</button>
+            <button id="freehandModeBtn" class="mode-pill" type="button">Freehand Mode</button>
+          </div>
+
+          <div id="typedModePanel" class="panel surface-muted">
+            <label for="typedAnswer">Type the Traditional-script answer</label>
+            <textarea id="typedAnswer" rows="4" placeholder="Type Mongol script here"></textarea>
+            <div class="inline-row">
+              <button id="checkTypedBtn" class="action-btn" type="button">Check Typed Answer</button>
+            </div>
+          </div>
+
+          <div id="freehandModePanel" class="panel surface-muted hide">
+            <label class="subtext" for="showTemplateToggle">
+              <input id="showTemplateToggle" type="checkbox" checked /> Show faint trace template (recommended)
+            </label>
+            <div class="pad-area">
+              <canvas id="quizPad" width="1000" height="320" aria-label="Quiz freehand canvas"></canvas>
+            </div>
+            <div class="inline-row">
+              <button id="clearQuizPadBtn" class="action-btn alt" type="button">Clear Quiz Pad</button>
+              <button id="undoQuizPadBtn" class="action-btn alt" type="button">Undo</button>
+              <button id="checkFreehandBtn" class="action-btn" type="button">Check Freehand Answer</button>
+            </div>
+          </div>
+
+          <p id="quizFeedback" class="feedback"></p>
+        </article>
+      </section>
+    </div>
+
+    <script src="app-common.js"></script>
+    <script src="app-freehand.js"></script>
+      <script src="theme-switcher.js"></script>
+  </body>
+</html>

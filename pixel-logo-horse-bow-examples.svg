@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 360" shape-rendering="crispEdges">
+  <rect width="980" height="360" fill="#efe3bb"/>
+
+  <style>
+    .label{font: 24px 'VT323', monospace; fill:#1d2540}
+    .sub{font: 18px 'VT323', monospace; fill:#4b5778}
+    .chip{font: 18px 'Press Start 2P', monospace; fill:#1d2540}
+  </style>
+
+  <!-- Section labels -->
+  <text x="80" y="44" class="label">Horsehead Icon</text>
+  <text x="540" y="44" class="label">Bow + Arrow Mark</text>
+
+  <!-- Horsehead badge -->
+  <rect x="80" y="68" width="140" height="140" fill="#132645"/>
+  <rect x="88" y="76" width="124" height="124" fill="#2e567d"/>
+  <rect x="100" y="88" width="100" height="100" fill="#3f739b"/>
+
+  <!-- Horse head pixel shape -->
+  <g fill="#f4efe2">
+    <rect x="138" y="102" width="16" height="16"/>
+    <rect x="154" y="102" width="16" height="16"/>
+    <rect x="170" y="102" width="12" height="16"/>
+
+    <rect x="122" y="118" width="16" height="16"/>
+    <rect x="138" y="118" width="44" height="16"/>
+
+    <rect x="122" y="134" width="16" height="16"/>
+    <rect x="138" y="134" width="32" height="16"/>
+
+    <rect x="130" y="150" width="16" height="16"/>
+    <rect x="146" y="150" width="16" height="16"/>
+    <rect x="162" y="150" width="12" height="16"/>
+
+    <rect x="146" y="166" width="16" height="12"/>
+    <rect x="162" y="166" width="10" height="12"/>
+
+    <rect x="114" y="118" width="8" height="8" fill="#f1c35a"/>
+  </g>
+
+  <!-- Horse preview in nav context -->
+  <rect x="80" y="246" width="360" height="64" fill="#efe3bb" stroke="#1d2540" stroke-width="4"/>
+  <rect x="96" y="258" width="40" height="40" fill="#132645"/>
+  <rect x="100" y="262" width="32" height="32" fill="#3f739b"/>
+  <g fill="#f4efe2">
+    <rect x="108" y="270" width="8" height="8"/>
+    <rect x="116" y="270" width="8" height="8"/>
+    <rect x="124" y="270" width="4" height="8"/>
+    <rect x="104" y="278" width="8" height="8"/>
+    <rect x="112" y="278" width="12" height="8"/>
+    <rect x="108" y="286" width="8" height="6"/>
+  </g>
+  <text x="154" y="284" class="chip">BICHIG</text>
+
+  <!-- Bow badge -->
+  <rect x="540" y="68" width="140" height="140" fill="#132645"/>
+  <rect x="548" y="76" width="124" height="124" fill="#2e567d"/>
+  <rect x="560" y="88" width="100" height="100" fill="#3f739b"/>
+
+  <!-- Bow + Arrow pixel shape -->
+  <g fill="#f4efe2">
+    <!-- bow body -->
+    <rect x="592" y="110" width="8" height="56"/>
+    <rect x="600" y="102" width="8" height="8"/>
+    <rect x="600" y="166" width="8" height="8"/>
+    <rect x="608" y="94" width="8" height="8"/>
+    <rect x="608" y="174" width="8" height="8"/>
+
+    <!-- string -->
+    <rect x="616" y="102" width="2" height="8"/>
+    <rect x="618" y="110" width="2" height="8"/>
+    <rect x="620" y="118" width="2" height="8"/>
+    <rect x="622" y="126" width="2" height="8"/>
+    <rect x="620" y="134" width="2" height="8"/>
+    <rect x="618" y="142" width="2" height="8"/>
+    <rect x="616" y="150" width="2" height="8"/>
+    <rect x="614" y="158" width="2" height="8"/>
+
+    <!-- arrow -->
+    <rect x="620" y="130" width="26" height="6"/>
+    <rect x="646" y="128" width="8" height="10"/>
+    <rect x="614" y="128" width="6" height="4"/>
+    <rect x="614" y="134" width="6" height="4"/>
+  </g>
+
+  <!-- Bow preview in nav context -->
+  <rect x="540" y="246" width="360" height="64" fill="#efe3bb" stroke="#1d2540" stroke-width="4"/>
+  <rect x="556" y="258" width="40" height="40" fill="#132645"/>
+  <rect x="560" y="262" width="32" height="32" fill="#3f739b"/>
+  <g fill="#f4efe2">
+    <rect x="568" y="270" width="4" height="16"/>
+    <rect x="572" y="266" width="4" height="4"/>
+    <rect x="572" y="286" width="4" height="4"/>
+    <rect x="576" y="272" width="10" height="4"/>
+    <rect x="586" y="270" width="4" height="8"/>
+  </g>
+  <text x="614" y="284" class="chip">BICHIG</text>
+
+  <text x="80" y="334" class="sub">Both are pixel-safe at small navbar sizes.</text>
+</svg>

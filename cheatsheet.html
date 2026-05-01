@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bichig - Cheat Sheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Noto+Sans+Mongolian&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="top-nav-inner">
+        <a class="brand" href="index.html">
+          <span class="brand-mark"><img class="brand-mark-icon" src="logo-horse-pixel.svg" alt="Horse logo" /></span>
+          <span class="brand-name">Bichig</span>
+        </a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="nav-link" href="index.html">Home</a>
+          <a class="nav-link" href="studio.html">Studio</a>
+          <a class="nav-link" href="freehand.html">Freehand Quiz</a>
+          <a class="nav-link" href="lessons.html">Lessons</a>
+          <a class="nav-link active" href="cheatsheet.html">Cheat Sheet</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Quick Reference</p>
+        <h1>Traditional Mongolian Script Cheat Sheet</h1>
+        <p>
+          One practical reference page with core letters, extended letters, positional forms, and the most
+          useful beginner grammar and script rules in clear language.
+        </p>
+        <div class="stat-grid">
+          <div class="stat"><span>Total Letters Listed</span><strong id="sheetTotal">35</strong></div>
+          <div class="stat"><span>Form Columns</span><strong>Isolate / Initial / Medial / Final</strong></div>
+          <div class="stat"><span>Main Reminder</span><strong>Position changes shape</strong></div>
+          <div class="stat"><span>Best Reading Shortcut</span><strong>Find first vowel</strong></div>
+        </div>
+      </section>
+
+      <section class="grid two">
+        <article class="panel">
+          <h2>How To Use This Sheet</h2>
+          <ol class="number-list">
+            <li>Start with vowels, then core consonants, then extended letters.</li>
+            <li>Compare isolate vs initial vs medial vs final for each letter.</li>
+            <li>Use the note column for quick memory anchors.</li>
+            <li>If stuck while reading, identify first vowel and suffix first.</li>
+          </ol>
+        </article>
+
+        <article class="panel">
+          <h2>Harmony Mini-Guide</h2>
+          <div class="rule-chip-wrap">
+            <span class="rule-chip">Back vowels: ᠠ ᠣ ᠤ</span>
+            <span class="rule-chip">Front vowels: ᠡ ᠥ ᠦ</span>
+            <span class="rule-chip">Neutral: ᠢ</span>
+            <span class="rule-chip">Letters connect in vertical flow</span>
+            <span class="rule-chip">Context resolves ambiguity</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="metric-item">
+          <span>Section</span>
+          <strong>Vowels</strong>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Isolate</th>
+                <th>Initial</th>
+                <th>Medial</th>
+                <th>Final</th>
+                <th>Sound / class</th>
+                <th>Quick note</th>
+              </tr>
+            </thead>
+            <tbody id="vowelRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="metric-item">
+          <span>Section</span>
+          <strong>Core consonants</strong>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Isolate</th>
+                <th>Initial</th>
+                <th>Medial</th>
+                <th>Final</th>
+                <th>Sound / class</th>
+                <th>Quick note</th>
+              </tr>
+            </thead>
+            <tbody id="coreRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="metric-item">
+          <span>Section</span>
+          <strong>Extended / loan letters</strong>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Isolate</th>
+                <th>Initial</th>
+                <th>Medial</th>
+                <th>Final</th>
+                <th>Sound / class</th>
+                <th>Quick note</th>
+              </tr>
+            </thead>
+            <tbody id="extendedRows"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="grid two">
+        <article class="panel">
+          <h2>Main Script Rules</h2>
+          <ul class="bullet-list">
+            <li>The script is vertical: top to bottom, columns go left to right.</li>
+            <li>Most letters connect inside words, and shape depends on position.</li>
+            <li>One letter can look different as isolate, initial, medial, and final.</li>
+            <li>Vowel harmony helps choose suffix forms and interpret ambiguous letters.</li>
+            <li>Ambiguity is normal in traditional script; context is part of reading.</li>
+          </ul>
+        </article>
+
+        <article class="panel">
+          <h2>Grammar Quick Notes</h2>
+          <ul class="bullet-list">
+            <li>Common sentence order is Subject-Object-Verb.</li>
+            <li>A lot of meaning is added through suffixes.</li>
+            <li>Suffix vowels often match back/front harmony of the word.</li>
+            <li>Mongolian often uses postpositions after nouns.</li>
+            <li>Reading strategy: first vowel -> final form -> suffix.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="panel">
+        <h2>High-Value Confusion Pairs</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Pair</th>
+                <th>Why it is confusing</th>
+                <th>How to resolve quickly</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ᠣ / ᠤ</td>
+                <td>Same shape family in position-based forms.</td>
+                <td>Use harmony class and known word spelling.</td>
+              </tr>
+              <tr>
+                <td>ᠥ / ᠦ</td>
+                <td>Same shape family in position-based forms.</td>
+                <td>Use front-vowel context and suffix patterns.</td>
+              </tr>
+              <tr>
+                <td>ᠲ / ᠳ</td>
+                <td>Can look visually close in fast reading.</td>
+                <td>Use expected word and surrounding morphology.</td>
+              </tr>
+              <tr>
+                <td>ᠨ / ᠩ</td>
+                <td>Both are nasal letters and often mixed early.</td>
+                <td>Train as a pair in real word chunks.</td>
+              </tr>
+              <tr>
+                <td>ᠺ / ᠻ</td>
+                <td>Both are k-family extended letters.</td>
+                <td>Memorize as a direct contrast in the extended set.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <p class="footer-note">
+        Unicode shaping can vary by browser and font. For best display, use a Mongolian-capable font such as Noto Sans Mongolian.
+      </p>
+    </div>
+
+    <script src="app-cheatsheet.js"></script>
+      <script src="theme-switcher.js"></script>
+  </body>
+</html>

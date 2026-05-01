@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" shape-rendering="crispEdges">
+  <rect width="920" height="280" fill="#efe3bb"/>
+
+  <style>
+    .label{font: 16px 'VT323', monospace; fill:#1d2540}
+    .tiny{font: 14px 'VT323', monospace; fill:#4b5778}
+  </style>
+
+  <!-- Card 1 -->
+  <rect x="40" y="40" width="180" height="180" fill="#2f5f86"/>
+  <rect x="48" y="48" width="164" height="164" fill="#3f739b"/>
+  <rect x="62" y="62" width="136" height="136" fill="#4e83ad"/>
+  <rect x="100" y="86" width="20" height="84" fill="#f4efe2"/>
+  <rect x="120" y="80" width="28" height="16" fill="#f4efe2"/>
+  <rect x="120" y="126" width="24" height="14" fill="#f4efe2"/>
+  <rect x="120" y="168" width="30" height="14" fill="#f4efe2"/>
+  <text x="130" y="245" text-anchor="middle" class="label">A · Script Stem</text>
+
+  <!-- Card 2 -->
+  <rect x="260" y="40" width="180" height="180" fill="#29466d"/>
+  <rect x="268" y="48" width="164" height="164" fill="#355a87"/>
+  <rect x="282" y="62" width="136" height="136" fill="#40699a"/>
+  <rect x="328" y="84" width="18" height="96" fill="#f3eddc"/>
+  <rect x="346" y="96" width="16" height="14" fill="#f3eddc"/>
+  <rect x="346" y="124" width="18" height="14" fill="#f3eddc"/>
+  <rect x="346" y="152" width="22" height="14" fill="#f3eddc"/>
+  <rect x="316" y="146" width="12" height="12" fill="#f3eddc"/>
+  <text x="350" y="245" text-anchor="middle" class="label">B · Hooked Glyph</text>
+
+  <!-- Card 3 -->
+  <rect x="480" y="40" width="180" height="180" fill="#305074"/>
+  <rect x="488" y="48" width="164" height="164" fill="#3b648f"/>
+  <rect x="502" y="62" width="136" height="136" fill="#4a77a7"/>
+  <rect x="548" y="84" width="18" height="100" fill="#f6f0df"/>
+  <rect x="566" y="84" width="18" height="16" fill="#f6f0df"/>
+  <rect x="566" y="116" width="12" height="14" fill="#f6f0df"/>
+  <rect x="566" y="144" width="20" height="14" fill="#f6f0df"/>
+  <rect x="566" y="172" width="14" height="12" fill="#f6f0df"/>
+  <text x="570" y="245" text-anchor="middle" class="label">C · Ladder Glyph</text>
+
+  <!-- Card 4 -->
+  <rect x="700" y="40" width="180" height="180" fill="#2c4568"/>
+  <rect x="708" y="48" width="164" height="164" fill="#36547c"/>
+  <rect x="722" y="62" width="136" height="136" fill="#436693"/>
+  <rect x="764" y="84" width="22" height="102" fill="#f7f1e2"/>
+  <rect x="786" y="84" width="18" height="14" fill="#f7f1e2"/>
+  <rect x="786" y="126" width="18" height="14" fill="#f7f1e2"/>
+  <rect x="786" y="168" width="24" height="14" fill="#f7f1e2"/>
+  <rect x="750" y="136" width="14" height="14" fill="#f7f1e2"/>
+  <text x="790" y="245" text-anchor="middle" class="label">D · Block Glyph</text>
+
+  <text x="40" y="24" class="tiny">Pixel Glyph Tile Concepts (example mockups)</text>
+</svg>
